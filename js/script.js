@@ -26,12 +26,6 @@ if(parola == parolaInversa){
   
 var pariOdispari = prompt("pari o dispari?")
 
-if(pariOdispari = "pari"){
-    document.getElementById("risultato").innerHTML += "<br> hai scelto pari";
-} else if ( pariOdispari = "dispari"){
-    document.getElementById("risultato").innerHTML +=  " <br> hai scelto dispari";
-}
-
 var numeroUtente = prompt("inserisci un numero da 1 a 5");
 
 document.getElementById("risultato").innerHTML +=  "<br> " + "il tuo numero è " + numeroUtente;
@@ -43,12 +37,30 @@ function getRandomNumber(){
    document.getElementById("risultato").innerHTML +=  "<br> " + "il numero della cpu è " + result;
    
     var somma = parseInt(numeroUtente) + result;
-    document.getElementById("risultato").innerHTML +=  "<br> " + "la somma dei 2 numeri è " + somma;
+    
+    document.getElementById("risultato").innerHTML +=  "<br> " + "la somma dei 2 numeri è " + somma ;
 
-    
-    
-    if (somma % 2 ){
-        document.getElementById("risultato").innerHTML += " quindi dispari"
-    } else{
-        document.getElementById("risultato").innerHTML += " quindi pari"
+    function pariDispari(num1){
+        if(num1 % 2 === 0)
+        return document.getElementById("risultato").innerHTML += ": pari!"  ;
+        else
+        return document.getElementById("risultato").innerHTML += ": dispari!" ;
     }
+
+    var sommaFinale = pariDispari(somma);
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
